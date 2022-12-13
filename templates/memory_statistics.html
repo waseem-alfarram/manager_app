@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block title %}
+Memory Statistics
+{% endblock %}
+{% block content %}
+<section class="container">
+    <div style="display: flex; margin-top: 10px; margin-bottom:10px;">
+        <h1>Cache Statistics in the last 30 minutes</h1>
+    </div>
+    <div class="section">
+        <div>
+            <canvas id="workers" class="myChart"></canvas>
+        </div>
+        <div>
+            <canvas id="miss_rate" class="myChart"></canvas>
+        </div>
+    </div>
+    <div class="section">
+        <div>
+            <canvas id="hit_rate" class="myChart"></canvas>
+        </div>
+        <div>
+            <canvas id="items_number" class="myChart"></canvas>
+        </div>
+    </div>
+    <div class="section">
+        <div>
+            <canvas id="items_size" class="myChart"></canvas>
+        </div>
+        <div>
+            <canvas id="requests_number" class="myChart"></canvas>
+        </div>
+    </div>
+    <p id="labels_values" hidden>{{ data }}</p>
+</section>
+<script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}
