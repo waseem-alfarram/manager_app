@@ -87,4 +87,4 @@ def memory_statistics():
     return render_template("memory_statistics.html", data = [item for item in range(1, 31)])
 
 
-app.run(host='0.0.0.0', port=80, debug=True)
+app.run(host='0.0.0.0', port=5000, debug=True)
