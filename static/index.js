@@ -111,9 +111,9 @@ new Chart(miss_rate, {
                     }
                 },
                 suggestedMin: 0,
-                suggestedMax: 1,
+                suggestedMax: 100,
                 ticks: {
-                    stepSize: 0.1
+                    stepSize: 10
                 }
             }
         }
@@ -170,9 +170,9 @@ new Chart(hit_rate, {
                     }
                 },
                 suggestedMin: 0,
-                suggestedMax: 1,
+                suggestedMax: 100,
                 ticks: {
-                    stepSize: 0.1
+                    stepSize: 10
                 }
             }
         }
@@ -354,7 +354,7 @@ function generate_workers() {
 
 
 function generate_miss_hit_rate() {
-    const arr = new Array(30).fill(null).map(() => (Math.random()))
+    const arr = new Array(30).fill(null).map(() => (Math.random() * 100))
     return arr
 }
 
